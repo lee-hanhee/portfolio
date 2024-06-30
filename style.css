@@ -122,6 +122,16 @@ nav ul li a:hover::after {
     color: #ff004f;
 }
 
+.sub-title {
+    font-size: 60px;
+    /* Font size */
+    font-weight: 600;
+    /* Font weight */
+    color: #fff;
+    /* Text color */
+    text-align: center;
+}
+
 /* ------------------portfolio------------------ */
 #portfolio {
     padding: 50px 0;

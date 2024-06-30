@@ -122,160 +122,6 @@ nav ul li a:hover::after {
     color: #ff004f;
 }
 
-/* ------------------about------------------ */
-#about {
-    padding: 80px 0;
-    /* Padding */
-    color: #ababab;
-    /* Text color */
-}
-
-.row {
-    display: flex;
-    /* Flexbox */
-    justify-content: space-between;
-    /* Space between the items */
-    flex-wrap: wrap;
-    /* Wrap the items */
-}
-
-.about-col-1 {
-    flex-basis: 35%;
-    /* Flex basis in which the element occupies 35% of the parent element */
-}
-
-.about-col-1 img {
-    width: 100%;
-    /* Width */
-    border-radius: 15px;
-    /* Border radius */
-}
-
-.about-col-2 {
-    flex-basis: 60%;
-    /* Flex basis in which the element occupies 60% of the parent element */
-    /* This will result in 5% space between the two elements (i.e. 35% + 5% + 60% = 100%) */
-}
-
-.about-col-2 p {
-    margin-top: 20px;
-    /* Margin top */
-}
-
-.sub-title {
-    font-size: 60px;
-    /* Font size */
-    font-weight: 600;
-    /* Font weight */
-    color: #fff;
-    /* Text color */
-    text-align: center;
-    /* Text alignment */
-}
-
-.tab-titles {
-    display: flex;
-    /* Flexbox */
-    margin: 20px 0 40px;
-    /* Margin where 20px is top, 0 is right and bottom is 40px */
-}
-
-.tab-links {
-    margin-right: 50px;
-    font-size: 18px;
-    font-weight: 500;
-    cursor: pointer;
-    /* Cursor which changes to pointer */
-    position: relative;
-    /* Position which helps in positioning the line */
-}
-
-.tab-links::after {
-    content: '';
-    width: 0;
-    height: 3px;
-    background: #ff004f;
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    transition: 0.5s;
-}
-
-.tab-links.active-link::after {
-    width: 100%;
-}
-
-.tab-contents ul li {
-    list-style: none;
-    margin: 10px 0;
-}
-
-.tab-contents ul li span {
-    color: #b54769;
-    font-size: 14px;
-}
-
-.tab-contents {
-    display: none;
-}
-
-.tab-contents.active-tab {
-    display: block;
-}
-
-/* ------------------course notes------------------ */
-#course-notes {
-    padding: 30px 0;
-}
-
-.courses-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
-}
-
-.courses-list div {
-    background: #262626;
-    padding: 40px;
-    font-size: 13px;
-    font-weight: 300;
-    border-radius: 10px;
-    transition: background 0.5s, transform 0.5s;
-}
-
-.courses-list div i {
-    font-size: 50px;
-    margin-bottom: 30px;
-}
-
-.courses-list div h3 {
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 10px;
-
-}
-
-.courses-list div h2 {
-    font-size: 30px;
-    font-weight: 500;
-    margin-bottom: 15px;
-}
-
-.courses-list div a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 12px;
-    margin-top: 20px;
-    display: inline-block;
-}
-
-
-.courses-list div:hover {
-    background: #ff004f;
-    transform: translateY(-10px);
-}
-
 /* ------------------portfolio------------------ */
 #portfolio {
     padding: 50px 0;
@@ -336,6 +182,12 @@ nav ul li a:hover::after {
     height: 60px;
     border-radius: 50%;
     text-align: center;
+    transition: 0.5s;
+}
+
+.layer a:hover {
+    background: #ff004f;
+    color: #fff;
 }
 
 .work:hover img {
@@ -346,21 +198,24 @@ nav ul li a:hover::after {
     height: 100%;
 }
 
-.btn {
-    display: block;
-    margin: 50px auto;
-    width: fit-content;
-    border: 1px solid #ff004f;
-    padding: 14px 50px;
-    border-radius: 6px;
-    text-decoration: none;
-    color: #fff;
-    transition: background 0.5s;
-    /* Transition effect for the background */
+.tech-icons{
+    text-align: center;
 }
 
-.btn:hover {
-    background: #ff004f;
+.tech-icons a{
+    color: #ff004f;
+    background-color: #fff;
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.tech-icons a:hover {
+    background-color: #ff004f;
+    color: #fff;
 }
 
 /* ------------------contact------------------ */

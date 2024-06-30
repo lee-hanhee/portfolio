@@ -1,0 +1,592 @@
+/*
+* -> Universal selector which selects all the elements on the page
+# -> ID selector which selects the element with the specified ID
+. -> Class selector which selects the elements with the specified class
+#px #px -> Width and height of the element 
+
+Can you put comments that describe what a line of CSS is doing in the CSS file?
+Yes, we can put comments in the CSS file to describe what a line of CSS is doing.
+*/
+* {
+    margin: 0;
+    /* Remove default margin */
+    padding: 0;
+    /* Remove default margin and padding */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+    /* Include padding and border in the element's total width and height */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080808;
+    /* Background color */
+    color: #fff;
+    /* Text color */
+}
+
+.container {
+    padding: 10px 10%;
+    /* Padding */
+}
+
+nav {
+    display: flex;
+    /* Flexbox which allows us to align items */
+    align-items: center;
+    /* Align items vertically */
+    justify-content: space-between;
+    /* Space between the items */
+    flex-wrap: wrap;
+    /* Wrap the items */
+}
+
+.logo {
+    width: 150 px;
+    /* Width */
+    margin-left: -50px;
+    /* Margin left */
+}
+
+nav ul li {
+    display: inline-block;
+    /* Display inline */
+    list-style: none;
+    /* Remove default list style */
+    margin: 10px 20px;
+    /* Margin where 10px is top and bottom and 20px is left and right */
+}
+
+nav ul li a {
+    /* a is a tag which is used for links */
+    color: #fff;
+    /* Text color */
+    text-decoration: none;
+    /* Remove underline */
+    font-size: 18px;
+    /* Font size */
+    position: relative;
+    /* Position */
+}
+
+nav ul li a::after {
+    /* ::after is a pseudo element which is used to add content after the element */
+    content: '';
+    /* Empty content */
+    width: 0;
+    /* Width */
+    height: 3px;
+    /* Height */
+    background: #ff004f;
+    /* Background color of the line */
+    position: absolute;
+    /* Position */
+    left: 0;
+    /* Left */
+    bottom: -6px;
+    /* Bottom */
+    transition: 1s;
+    /* Transition effect */
+}
+
+nav ul li a:hover::after {
+    /* Hover effect */
+    width: 100%;
+    /* Width */
+}
+
+.header-text {
+    margin-top: 20%;
+    font-size: 30px;
+    text-align: center;
+}
+
+.hero-image {
+    width: 35%;
+    height: 35%;
+    object-fit: cover;
+    /* Cover the entire element */
+    margin-top: -250px;
+    /* Margin top */
+}
+
+.header-text h1 {
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.header-text h1 span {
+    color: #ff004f;
+}
+
+/* ------------------about------------------ */
+#about {
+    padding: 80px 0;
+    /* Padding */
+    color: #ababab;
+    /* Text color */
+}
+
+.row {
+    display: flex;
+    /* Flexbox */
+    justify-content: space-between;
+    /* Space between the items */
+    flex-wrap: wrap;
+    /* Wrap the items */
+}
+
+.about-col-1 {
+    flex-basis: 35%;
+    /* Flex basis in which the element occupies 35% of the parent element */
+}
+
+.about-col-1 img {
+    width: 100%;
+    /* Width */
+    border-radius: 15px;
+    /* Border radius */
+}
+
+.about-col-2 {
+    flex-basis: 60%;
+    /* Flex basis in which the element occupies 60% of the parent element */
+    /* This will result in 5% space between the two elements (i.e. 35% + 5% + 60% = 100%) */
+}
+
+.about-col-2 p {
+    margin-top: 20px;
+    /* Margin top */
+}
+
+.sub-title {
+    font-size: 60px;
+    /* Font size */
+    font-weight: 600;
+    /* Font weight */
+    color: #fff;
+    /* Text color */
+    text-align: center;
+    /* Text alignment */
+}
+
+.tab-titles {
+    display: flex;
+    /* Flexbox */
+    margin: 20px 0 40px;
+    /* Margin where 20px is top, 0 is right and bottom is 40px */
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    /* Cursor which changes to pointer */
+    position: relative;
+    /* Position which helps in positioning the line */
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+    width: 100%;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span {
+    color: #b54769;
+    font-size: 14px;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+/* ------------------course notes------------------ */
+#course-notes {
+    padding: 30px 0;
+}
+
+.courses-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.courses-list div {
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.courses-list div i {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.courses-list div h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+
+}
+
+.courses-list div h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.courses-list div a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+
+.courses-list div:hover {
+    background: #ff004f;
+    transform: translateY(-10px);
+}
+
+/* ------------------portfolio------------------ */
+#portfolio {
+    padding: 50px 0;
+}
+
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer {
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.layer h3 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.layer a {
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.work:hover img {
+    transform: scale(1.1);
+}
+
+.work:hover .layer {
+    height: 100%;
+}
+
+.btn {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+    /* Transition effect for the background */
+}
+
+.btn:hover {
+    background: #ff004f;
+}
+
+/* ------------------contact------------------ */
+.contact {
+    flex-basis: 100%;
+    /* Flex basis in which the element occupies 100% of the parent element */
+}
+
+.social-icons {
+    text-align: center;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+    /* Transition effect for the color */
+}
+
+.social-icons a:hover {
+    color: #ff004f;
+    transform: translateY(-5px);
+    /* Transform effect */
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+/* ----------------------css for iphone screens ------------------ */
+nav .fa-bars {
+    display: none;
+}
+
+nav .fa-x {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .hero-image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        /* Cover the entire element */
+        margin-top: -250px;
+        /* Margin top */
+    }
+
+    .header-text {
+        margin-top: 100%;
+        font-size: 16px;
+    }
+
+    .header-text h1 {
+        font-size: 30px;
+    }
+
+    nav .fa-bars {
+        display: block;
+        font-size: 25px;
+    }
+
+    nav .fa-x {
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul {
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        /* because the width is 200. So, it will be hidden */
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        /* Z-index which specifies the stack order of an element */
+        transition: right 0.5s;
+        /* Transition effect */
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fa-x {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    nav ul .fa-bars {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    .sub-title {
+        font-size: 40px;
+    }
+
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 100%;
+        /* Flex basis in which the element occupies 100% of the parent element */
+    }
+
+    .about-col-1 {
+        margin-bottom: 30px;
+    }
+
+    .about-col-2 {
+        font-size: 14px;
+    }
+
+    .tab-links {
+        font-size: 16px;
+        margin-right: 20px;
+    }
+}
+
+/* ----------------------css for ipad screens ------------------ */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .hero-image {
+        width: 75%;
+        height: auto;
+        object-fit: cover;
+        /* Cover the entire element */
+        margin-top: -2000px;
+        /* Margin top */
+    }
+
+    .header-text {
+        margin-top: 100%;
+        font-size: 30px;
+    }
+
+    .header-text h1 {
+        font-size: 100px;
+    }
+
+    nav .fa-bars {
+        display: block;
+        font-size: 25px;
+    }
+
+    nav .fa-x {
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul {
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        /* because the width is 200. So, it will be hidden */
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        /* Z-index which specifies the stack order of an element */
+        transition: right 0.5s;
+        /* Transition effect */
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fa-x {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    nav ul .fa-bars {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    .sub-title {
+        font-size: 40px;
+    }
+
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 100%;
+        /* Flex basis in which the element occupies 100% of the parent element */
+    }
+
+    .about-col-1 {
+        margin-bottom: 30px;
+    }
+
+    .about-col-1 img {
+        max-width: 100%;
+        /* Width */
+        height: auto;
+        /* Maintain aspect ratio */
+        border-radius: 15px;
+        /* Border radius */
+    }
+
+    .about-col-2 {
+        font-size: 14px;
+    }
+
+    .tab-links {
+        font-size: 16px;
+        margin-right: 20px;
+    }
+}
